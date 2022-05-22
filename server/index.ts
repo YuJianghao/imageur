@@ -1,3 +1,4 @@
+import './boot'
 import Koa from 'koa'
 
 const app = new Koa()
