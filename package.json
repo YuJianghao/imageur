@@ -1,12 +1,18 @@
 {
   "name": "imageur",
   "version": "0.0.1",
-  "description": "Image pool management site",
   "private": true,
+  "description": "Image pool management site",
   "keywords": [
     "image pool",
     "image management"
   ],
+  "license": "MIT",
+  "author": "winwin2011 <yjh2011@live.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YuJianghao/imageur.git"
+  },
   "scripts": {
     "test": "vitest",
     "start": "node dist/server/index.mjs",
@@ -16,14 +22,10 @@
     "dev:server": "unbuild --stub && esno dist/server/index.mjs",
     "build:app": "vite build",
     "dev:app": "vite --open",
-    "typecheck": "tsc --noEmit && vue-tsc --noEmit"
+    "typecheck": "tsc --noEmit && vue-tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/YuJianghao/imageur.git"
-  },
-  "author": "winwin2011 <yjh2011@live.com>",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/YuJianghao/imageur/issues"
   },
