@@ -8,7 +8,10 @@
     "image management"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dist/server/index.mjs",
+    "build:server": "unbuild",
+    "dev:server": "unbuild --stub && esno dist/server/index.mjs"
   },
   "repository": {
     "type": "git",
@@ -19,5 +22,12 @@
   "bugs": {
     "url": "https://github.com/YuJianghao/imageur/issues"
   },
-  "homepage": "https://github.com/YuJianghao/imageur#readme"
+  "homepage": "https://github.com/YuJianghao/imageur#readme",
+  "dependencies": {
+    "koa": "^2.13.4"
+  },
+  "devDependencies": {
+    "esno": "^0.16.3",
+    "unbuild": "^0.7.4"
+  }
 }
