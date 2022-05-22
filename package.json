@@ -2,7 +2,7 @@
   "name": "imageur",
   "version": "0.0.1",
   "description": "Image pool management site",
-  "main": "index.js",
+  "private": true,
   "keywords": [
     "image pool",
     "image management"
