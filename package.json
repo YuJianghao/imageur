@@ -1,0 +1,23 @@
+{
+  "name": "imageur",
+  "version": "0.0.1",
+  "description": "Image pool management site",
+  "main": "index.js",
+  "keywords": [
+    "image pool",
+    "image management"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YuJianghao/imageur.git"
+  },
+  "author": "winwin2011 <yjh2011@live.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/YuJianghao/imageur/issues"
+  },
+  "homepage": "https://github.com/YuJianghao/imageur#readme"
+}
