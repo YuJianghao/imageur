@@ -24,7 +24,8 @@
     "dev:app": "vite --open",
     "typecheck": "tsc --noEmit && vue-tsc --noEmit",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "release": "standard-version --releaseCommitMessageFormat='chore: release v{{currentTag}}'"
   },
   "bugs": {
     "url": "https://github.com/YuJianghao/imageur/issues"
@@ -40,6 +41,7 @@
     "dotenv": "^16.0.1",
     "eslint": "^8.16.0",
     "esno": "^0.16.3",
+    "standard-version": "^9.5.0",
     "typescript": "^4.6.4",
     "unbuild": "^0.7.4",
     "vite": "^2.9.9",
