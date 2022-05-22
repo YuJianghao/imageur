@@ -1,0 +1,9 @@
+.git
+.vscode
+.github
+.DS_Store
+.env*
+.eslint*
+.log
+docker-compose.yml
+node_modules
