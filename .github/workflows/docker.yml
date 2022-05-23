@@ -1,0 +1,20 @@
+name: build push to docker
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+
+  release:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Build the Docker image
+        env:
+          IMAGE_TAG: ${{ github.ref_name }}
+        run: docker build . --file Dockerfile --tag winwin2011/imageur:$(IMAGE_TAG) && docker push

@@ -1,0 +1,42 @@
+name: release
+
+on:
+  pull_request:
+    types:
+      - closed
+    branches:
+      - main
+      - prerelease
+
+jobs:
+
+  release:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup git config
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Release
+        if: github.ref_name == 'main'
+        run: pnpm run release
+
+      - name: Prerelease
+        if: github.ref_name == 'prerelease'
+        run: pnpm run release --prerelease=beta
+
+      - name: Push
+        run: |
+          git push origin
+          git push origin --tag

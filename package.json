@@ -2,6 +2,7 @@
   "name": "imageur",
   "version": "0.0.2-beta.0",
   "private": true,
+  "packageManager": "pnpm@7.0.0",
   "description": "Image pool management site",
   "keywords": [
     "image pool",
