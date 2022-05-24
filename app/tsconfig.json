@@ -7,4 +7,5 @@
       "vite/client"
     ]
   },
+  "include": ["./**/*.ts"]
 }
