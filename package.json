@@ -17,7 +17,7 @@
   "scripts": {
     "test": "vitest",
     "start": "node dist/server/index.cjs",
-    "build": "npm run typecheck && concurrently -p [{name}] -n 'server,app' -c 'green.bold,blue.bold' 'npm run build:server' 'npm run build:app' ",
+    "build": "concurrently -p [{name}] -n 'server,app' -c 'green.bold,blue.bold' 'npm run build:server' 'npm run build:app' ",
     "dev": "concurrently -p [{name}] -n 'server,app' -c 'green.bold,blue.bold' 'npm run dev:server' 'npm run dev:app' ",
     "build:server": "rollup -c",
     "dev:server": "nodemon",
@@ -34,6 +34,7 @@
   "homepage": "https://github.com/YuJianghao/imageur#readme",
   "dependencies": {
     "@winwin/koa-authentication": "^0.2.2",
+    "axios": "^0.27.2",
     "http-errors": "^2.0.0",
     "koa": "^2.13.4",
     "koa-bodyparser": "^4.3.0",
