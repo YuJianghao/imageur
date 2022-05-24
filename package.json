@@ -20,7 +20,7 @@
     "build": "npm run typecheck && concurrently -p [{name}] -n 'server,app' -c 'green.bold,blue.bold' 'npm run build:server' 'npm run build:app' ",
     "dev": "concurrently -p [{name}] -n 'server,app' -c 'green.bold,blue.bold' 'npm run dev:server' 'npm run dev:app' ",
     "build:server": "rollup -c",
-    "dev:server": "nodemon ./dist/server/index.cjs",
+    "dev:server": "nodemon",
     "build:app": "vite build",
     "dev:app": "vite --open",
     "typecheck": "tsc --noEmit && vue-tsc --noEmit",
