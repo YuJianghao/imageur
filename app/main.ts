@@ -1,8 +1,4 @@
-import { request } from '~/api/request'
-const app = document.getElementById('app')
-if (app)
-  app.textContent = 'hi from app'
+import { createApp } from 'vue'
+import App from './App.vue'
 
-setTimeout(() => {
-  request.get('/auth/login')
-}, 1000)
+createApp(App).mount('#app')
