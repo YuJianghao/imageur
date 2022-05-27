@@ -1,3 +1,7 @@
-const app = document.getElementById('app')
-if (app)
-  app.textContent = 'hi from app'
+import { createApp } from 'vue'
+import { router } from './router'
+import App from './App.vue'
+
+createApp(App)
+  .use(router)
+  .mount('#app')

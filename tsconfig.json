@@ -8,8 +8,15 @@
     "strict": true,
     "skipLibCheck": true,
     "paths": {
-      "~/*": ["./app/*"],
-      "@server/*": ["./server/*"]
+      "~/*": [
+        "./app/*"
+      ],
+      "@server/*": [
+        "./server/*"
+      ]
     }
-  }
+  },
+  "include": [
+    "./server/**/*.ts"
+  ]
 }
