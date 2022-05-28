@@ -25,8 +25,8 @@ export default defineConfig({
   },
   alias: [
     {
-      find: '~',
-      replacement: path.resolve(__dirname, 'app'),
+      find: '~/',
+      replacement: `${path.resolve(__dirname, 'app')}/`,
     },
   ],
 })
