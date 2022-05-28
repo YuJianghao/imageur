@@ -1,8 +1,8 @@
 import './boot'
+import { auth } from '@server/middlewares/auth'
 import Koa from 'koa'
 import bodyParser from 'koa-bodyparser'
 import logger from 'koa-logger'
-import { auth } from '@server/middlewares/auth'
 
 const app = new Koa()
 
