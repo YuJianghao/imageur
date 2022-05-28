@@ -2,11 +2,17 @@
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig.json to read more about this file */
     "target": "es2016" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
-    "module": "commonjs",
+    "module": "esnext",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
     "strict": true,
     "skipLibCheck": true,
+    "jsx": "preserve",
+    "types": [
+      "node",
+      "vite/client"
+    ],
     "paths": {
       "~/*": [
         "./app/*"
@@ -15,7 +21,5 @@
         "./server/*"
       ]
     }
-  },
-  "includes": ["./server/**/*.ts"],
-  "exclude": ["app"]
+  }
 }
