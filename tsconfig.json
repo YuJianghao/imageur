@@ -17,9 +17,6 @@
       "~/*": [
         "./app/*"
       ],
-      "@/*": [
-        "./app/components/*"
-      ],
       "@server/*": [
         "./server/*"
       ]

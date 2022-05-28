@@ -30,9 +30,5 @@ export default defineConfig({
       find: '~/',
       replacement: `${path.resolve(__dirname, 'app')}/`,
     },
-    {
-      find: '@/',
-      replacement: `${path.resolve(__dirname, 'app')}/components/`,
-    },
   ],
 })
