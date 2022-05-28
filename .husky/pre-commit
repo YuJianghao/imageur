@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+npm lint:fix && npm typecheck && git add .
+npm run lint:fix && npm typecheck && git add .
+npm run lint:fix && npm run typecheck && git add .
