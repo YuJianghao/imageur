@@ -14,8 +14,8 @@
       "@server/*": [
         "./server/*"
       ]
-    },
+    }
   },
-  "includes":["./server/**/*.ts"],
+  "includes": ["./server/**/*.ts"],
   "exclude": ["app"]
 }
