@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { reactive } from 'vue'
-import { NButton, NForm, NFormItem, NH1, NInput } from 'naive-ui'
+import { NButton, NForm, NFormItem, NH1, NInput, useThemeVars } from 'naive-ui'
 import { signIn } from '~/api/auth'
 import { forceReloadWindow } from '~/utils'
 
@@ -17,11 +17,12 @@ const onSubmit = () => {
       window.alert(err)
     })
 }
+const vars = useThemeVars()
 </script>
 
 <template>
   <div h-100vh w-100vw flex="~">
-    <div style="width: 60%" bg-blue-500 />
+    <div :style="{ width: '60%', backgroundColor: vars.primaryColor }" />
     <div style="width: 40%">
       <div px-20 py-30>
         <NH1>Signin</NH1>
