@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { reactive } from 'vue'
+import { NButton, NForm, NFormItem, NH1, NInput } from 'naive-ui'
 import { signIn } from '~/api/auth'
 import { forceReloadWindow } from '~/utils'
 
@@ -19,9 +20,25 @@ const onSubmit = () => {
 </script>
 
 <template>
-  <form action="" @submit.prevent="onSubmit">
-    <input v-model="form.username" type="text">
-    <input v-model="form.password" type="password">
-    <button>SignIn</button>
-  </form>
+  <div h-100vh w-100vw flex="~">
+    <div style="width: 60%" bg-blue-500 />
+    <div style="width: 40%">
+      <div px-20 py-30>
+        <NH1>Signin</NH1>
+        <NForm :model="form" mt-5 @submit.prevent="onSubmit">
+          <NFormItem path="username" label="Username">
+            <NInput v-model:value="form.username" />
+          </NFormItem>
+          <NFormItem path="password" label="password">
+            <NInput v-model:value="form.password" type="password" />
+          </NFormItem>
+          <NFormItem>
+            <NButton block type="primary" attr-type="submit">
+              SignIn
+            </NButton>
+          </NFormItem>
+        </NForm>
+      </div>
+    </div>
+  </div>
 </template>
