@@ -2,6 +2,7 @@ import path from 'path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import Pages from 'vite-plugin-pages'
+import Unocss from 'unocss/vite'
 
 export default defineConfig({
   plugins: [
@@ -9,6 +10,7 @@ export default defineConfig({
     Pages({
       dirs: 'app/pages',
     }),
+    Unocss(),
   ],
   server: {
     port: 4000,
