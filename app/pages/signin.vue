@@ -3,7 +3,7 @@ import { reactive } from 'vue'
 import { NButton, NForm, NFormItem, NH1, NInput, useThemeVars } from 'naive-ui'
 import { signIn } from '~/api/auth'
 import { forceReloadWindow } from '~/utils'
-
+// TODO validate rule
 const form = reactive({
   username: '',
   password: '',
@@ -22,8 +22,8 @@ const vars = useThemeVars()
 
 <template>
   <div h-100vh w-100vw flex="~">
-    <div :style="{ width: '60%', backgroundColor: vars.primaryColor }" />
-    <div style="width: 40%">
+    <div :style="{ flex: '1 0 0', backgroundColor: vars.primaryColor }" />
+    <div style="width: 100%;max-width:500px">
       <div px-20 py-30>
         <NH1>Signin</NH1>
         <NForm :model="form" mt-5 @submit.prevent="onSubmit">
