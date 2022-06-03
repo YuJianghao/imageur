@@ -1,5 +1,5 @@
 {
-  "exec": "npm run build && npm run start",
+  "exec": "npm run build:server && npm run start",
   "watch": [
     "./server"
   ],
