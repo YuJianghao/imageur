@@ -1,19 +1,10 @@
-import axios from 'axios'
 import OSS from 'ali-oss'
 import { ref } from 'vue'
 import { nanoid } from 'nanoid'
+import { refreshSTSToken } from '~/api/oss'
 
 export const useOss = () => {
   const client = ref<OSS | null>(null)
-  async function refreshSTSToken() {
-    const res = await axios.post('/api/sts')
-    const data = res.data
-    return {
-      accessKeyId: data.AccessKeyId as string,
-      accessKeySecret: data.AccessKeySecret as string,
-      stsToken: data.SecurityToken as string,
-    }
-  }
   const refresh = () => refreshSTSToken().then((data) => {
     client.value = new OSS({
       region: 'oss-cn-beijing',
