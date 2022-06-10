@@ -9,7 +9,7 @@ const upload = () => {
   const fileEl = file.value!
   if (!fileEl.files)
     return
-  oss.upload(fileEl.files).then(({ name, url }) => {
+  oss.upload(fileEl.files[0]).then(({ name, url }) => {
     imgs.value.push({ name, url })
   })
 }

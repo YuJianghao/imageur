@@ -16,8 +16,8 @@ export const useOss = () => {
     })
   })
   const createFileName = () => `share/${nanoid()}`
-  const upload = (files: FileList) => {
-    return client.value!.put(createFileName(), files[0])
+  const upload = (file: File) => {
+    return client.value!.put(createFileName(), file)
   }
   refresh()
   return { upload, refresh }
