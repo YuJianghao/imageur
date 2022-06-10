@@ -6,5 +6,7 @@ export async function refreshSTSToken() {
     accessKeyId: data.AccessKeyId as string,
     accessKeySecret: data.AccessKeySecret as string,
     stsToken: data.SecurityToken as string,
+    region: data.region as string,
+    bucket: data.bucket as string,
   }
 }

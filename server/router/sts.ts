@@ -12,6 +12,8 @@ router.post('/sts', async (ctx) => {
       AccessKeySecret: result.credentials.AccessKeySecret,
       SecurityToken: result.credentials.SecurityToken,
       Expiration: result.credentials.Expiration,
+      region: process.env.REGION,
+      bucket: process.env.BUCKET,
     }
   }).catch((err) => {
     ctx.status = 400

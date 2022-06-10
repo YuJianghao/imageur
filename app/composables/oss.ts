@@ -7,11 +7,11 @@ export const useOss = () => {
   const client = ref<OSS | null>(null)
   const refresh = () => refreshSTSToken().then((data) => {
     client.value = new OSS({
-      region: 'oss-cn-beijing',
+      region: data.region,
       accessKeyId: data.accessKeyId,
       accessKeySecret: data.accessKeySecret,
       stsToken: data.stsToken,
-      bucket: 'winwincdn',
+      bucket: data.bucket,
       refreshSTSToken,
     })
   })
