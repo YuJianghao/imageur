@@ -7,16 +7,7 @@ import { signOut } from '~/api/auth'
 import { useOss } from '~/composables/oss'
 import ImageInfo from '~/components/ImageInfo.vue'
 const oss = useOss()
-const imgs = ref<{ name: string; url: string }[]>(
-  [{
-    name: 'share/a_ddV_wNDNxKQetCVRWw9',
-    url: 'http://winwincdn.oss-cn-beijing.aliyuncs.com/share/a_ddV_wNDNxKQetCVRWw9',
-  },
-  {
-    name: 'share/SE69TzOJMmXzrsCr3ckvs',
-    url: 'http://winwincdn.oss-cn-beijing.aliyuncs.com/share/SE69TzOJMmXzrsCr3ckvs',
-  }],
-)
+const imgs = ref<{ name: string; url: string }[]>([])
 const vars = useThemeVars()
 const fileInfo = ref<FileInfo>()
 const onUploadChange = (options: { file: FileInfo }) => (fileInfo.value = options.file)
