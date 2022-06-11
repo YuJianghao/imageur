@@ -1,10 +1,21 @@
 <script setup lang="ts">
-import { NButton, NIcon, NImage, NText } from 'naive-ui'
+import { NButton, NIcon, NImage, NText, useMessage } from 'naive-ui'
 import { LinkOutline, LogoMarkdown } from '@vicons/ionicons5'
-defineProps<{
+import { useClipboard } from '@vueuse/core'
+const props = defineProps<{
   name: string
   url: string
 }>()
+const { copy } = useClipboard()
+const message = useMessage()
+const onCopyUrl = () => {
+  copy(props.url)
+  message.success('URL copied!')
+}
+const onCopyMarkdown = () => {
+  copy(`![](${props.url})`)
+  message.success('markdown copied!')
+}
 </script>
 
 <template>
@@ -13,14 +24,14 @@ defineProps<{
     <NText flex-1>
       {{ name }}
     </NText>
-    <NButton>
+    <NButton @click="onCopyUrl">
       <template #icon>
         <NIcon>
           <LinkOutline />
         </NIcon>
       </template>
     </NButton>
-    <NButton>
+    <NButton @click="onCopyMarkdown">
       <template #icon>
         <NIcon>
           <LogoMarkdown />
