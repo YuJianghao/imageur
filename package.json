@@ -4,16 +4,20 @@
   "private": true,
   "packageManager": "pnpm@7.0.0",
   "description": "Image pool management site",
-  "keywords": [
-    "image pool",
-    "image management"
-  ],
-  "license": "MIT",
   "author": "winwin2011 <yjh2011@live.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/YuJianghao/imageur#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/YuJianghao/imageur.git"
   },
+  "bugs": {
+    "url": "https://github.com/YuJianghao/imageur/issues"
+  },
+  "keywords": [
+    "image pool",
+    "image management"
+  ],
   "scripts": {
     "test": "vitest",
     "start": "node dist/server/index.cjs",
@@ -28,10 +32,6 @@
     "lint:fix": "eslint . --fix",
     "release": "standard-version --releaseCommitMessageFormat='chore: release v{{currentTag}}'"
   },
-  "bugs": {
-    "url": "https://github.com/YuJianghao/imageur/issues"
-  },
-  "homepage": "https://github.com/YuJianghao/imageur#readme",
   "dependencies": {
     "@koa/router": "^10.1.1",
     "@vueuse/core": "^8.5.0",
