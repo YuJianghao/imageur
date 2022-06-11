@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.0](https://github.com/YuJianghao/imageur/compare/v0.0.2...v0.1.0) (2022-06-11)
+
+
+### Features
+
+* statics ([#12](https://github.com/YuJianghao/imageur/issues/12)) ([f76012d](https://github.com/YuJianghao/imageur/commit/f76012d06f6f44ff8ead19026ae0413c820fb828))
+
 ### [0.0.2](https://github.com/YuJianghao/imageur/compare/v0.0.2-beta.0...v0.0.2) (2022-06-11)
 
 
