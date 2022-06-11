@@ -1,29 +1,56 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import { NButton, NCard, NIcon, NText, NUpload, NUploadDragger, useThemeVars } from 'naive-ui'
+import { ImageOutline as UploadIcon } from '@vicons/ionicons5'
+import type { FileInfo } from 'naive-ui/es/upload/src/interface'
 import { signOut } from '~/api/auth'
 import { useOss } from '~/composables/oss'
 const oss = useOss()
-const file = ref<HTMLInputElement>()
 const imgs = ref<{ name: string; url: string }[]>([])
+const vars = useThemeVars()
+const fileInfo = ref<FileInfo>()
+const onUploadChange = (options: { file: FileInfo }) => (fileInfo.value = options.file)
 const upload = () => {
-  const fileEl = file.value!
-  if (!fileEl.files)
+  const file = fileInfo.value?.file
+  if (!file)
     return
-  oss.upload(fileEl.files[0]).then(({ name, url }) => {
+  oss.upload(file).then(({ name, url }) => {
     imgs.value.push({ name, url })
   })
 }
 </script>
 
 <template>
-  <div>
-    <button @click="signOut">
-      signout
-    </button>
-    <input ref="file" type="file">
-    <button @click="upload">
-      uplaod
-    </button>
-    <img v-for="item in imgs" :key="item.name" :src="item.url" :alt="item.name">
+  <div h-100vh w-100vw :style="{ backgroundColor: vars.primaryColor }">
+    <nav flex="~" py2 px4>
+      <div flex-1 />
+      <NText secondary text text-white:50 hover:text-white cursor-pointer @click="signOut">
+        SignOff
+      </NText>
+    </nav>
+    <NCard w150 mx-auto mt-50>
+      <NUpload :max="1" :on-change="onUploadChange">
+        <NUploadDragger>
+          <div style="margin-bottom: 12px">
+            <NIcon size="48" :depth="3">
+              <UploadIcon />
+            </NIcon>
+          </div>
+          <NText style="font-size: 16px">
+            Click our Drag inside to upload.
+          </NText>
+        </NUploadDragger>
+      </NUpload>
+      <NButton block :disabled="!fileInfo" @click="upload">
+        upload
+      </NButton>
+      <pre>{{ imgs }}</pre>
+    </NCard>
   </div>
 </template>
+
+<style>
+.n-upload-trigger{
+  display: block;
+}
+</style>
