@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
 import type { GlobalThemeOverrides } from 'naive-ui'
-import { NConfigProvider, NMessageProvider, NThemeEditor } from 'naive-ui'
+import { NConfigProvider, NMessageProvider } from 'naive-ui'
 const themeOverrides: GlobalThemeOverrides = {
   common: {
     primaryColor: '#1b55c4ff',
@@ -9,16 +9,13 @@ const themeOverrides: GlobalThemeOverrides = {
     primaryColorPressed: '#1a49a0ff',
     primaryColorSuppl: '#283856ff',
   },
-
 }
 </script>
 
 <template>
   <NConfigProvider :theme-overrides="themeOverrides">
-    <NThemeEditor>
-      <NMessageProvider>
-        <RouterView />
-      </NMessageProvider>
-    </NThemeEditor>
+    <NMessageProvider>
+      <RouterView />
+    </NMessageProvider>
   </NConfigProvider>
 </template>
