@@ -27,6 +27,7 @@ specifiers:
   eslint: ^8.16.0
   esno: ^0.16.3
   http-errors: ^2.0.0
+  husky: ^8.0.1
   koa: ^2.13.4
   koa-bodyparser: ^4.3.0
   koa-logger: ^3.2.1
@@ -87,6 +88,7 @@ devDependencies:
   dotenv: registry.npmmirror.com/dotenv/16.0.1
   eslint: registry.npmmirror.com/eslint/8.16.0
   esno: registry.npmmirror.com/esno/0.16.3
+  husky: 8.0.1
   naive-ui: registry.npmmirror.com/naive-ui/2.29.0_vue@3.2.36
   nodemon: registry.npmmirror.com/nodemon/2.0.16
   rollup: registry.npmmirror.com/rollup/2.74.1
@@ -2005,6 +2007,12 @@ packages:
     dependencies:
       ms: 2.1.2
     dev: false
+
+  /husky/8.0.1:
+    resolution: {integrity: sha512-xs7/chUH/CKdOCs7Zy0Aev9e/dKOMZf3K1Az1nar3tzlv0jfqnYtu235bstsWTmXOR0EfINrPa97yy4Lz6RiKw==}
+    engines: {node: '>=14'}
+    hasBin: true
+    dev: true
 
   /iconv-lite/0.4.24:
     resolution: {integrity: sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==}
