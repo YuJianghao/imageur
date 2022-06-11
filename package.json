@@ -4,16 +4,20 @@
   "private": true,
   "packageManager": "pnpm@7.0.0",
   "description": "Image pool management site",
-  "keywords": [
-    "image pool",
-    "image management"
-  ],
-  "license": "MIT",
   "author": "winwin2011 <yjh2011@live.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/YuJianghao/imageur#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/YuJianghao/imageur.git"
   },
+  "bugs": {
+    "url": "https://github.com/YuJianghao/imageur/issues"
+  },
+  "keywords": [
+    "image pool",
+    "image management"
+  ],
   "scripts": {
     "test": "vitest",
     "start": "node dist/server/index.cjs",
@@ -28,10 +32,6 @@
     "lint:fix": "eslint . --fix",
     "release": "standard-version --releaseCommitMessageFormat='chore: release v{{currentTag}}'"
   },
-  "bugs": {
-    "url": "https://github.com/YuJianghao/imageur/issues"
-  },
-  "homepage": "https://github.com/YuJianghao/imageur#readme",
   "dependencies": {
     "@koa/router": "^10.1.1",
     "@vueuse/core": "^8.5.0",
@@ -43,13 +43,14 @@
     "koa": "^2.13.4",
     "koa-bodyparser": "^4.3.0",
     "koa-logger": "^3.2.1",
+    "koa-static": "^5.0.0",
     "nanoid": "^3.3.4",
     "universal-cookie": "^4.0.4",
     "vue": "^3.2.36",
     "vue-router": "^4.0.15"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.23.1",
+    "@antfu/eslint-config": "^0.25.1",
     "@rollup/plugin-alias": "^3.1.9",
     "@rollup/plugin-commonjs": "^22.0.0",
     "@rollup/plugin-node-resolve": "^13.3.0",
@@ -57,6 +58,7 @@
     "@types/koa": "^2.13.4",
     "@types/koa-bodyparser": "^4.3.7",
     "@types/koa-logger": "^3.1.2",
+    "@types/koa-static": "^4.0.2",
     "@types/koa__router": "^8.0.11",
     "@types/node": "^17.0.36",
     "@types/rollup-plugin-auto-external": "^2.0.2",

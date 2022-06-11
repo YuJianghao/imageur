@@ -1,6 +1,6 @@
-import axios from 'axios'
+import { request } from './request'
 export async function refreshSTSToken() {
-  const res = await axios.post('/api/sts')
+  const res = await request.post('/sts')
   const data = res.data
   return {
     accessKeyId: data.AccessKeyId as string,
