@@ -2,11 +2,11 @@ version: '3.6'
 
 services:
   imageur:
-    image: winwin2011/imageur:0.1.0
+    image: winwin2011/imageur:latest
     container_name: imageur
     restart: unless-stopped
     ports:
-      -3000:3000
+      - 3000:3000
     environment:
       - USERNAME=${USERNAME}
       - PASSWORD=${PASSWORD}
