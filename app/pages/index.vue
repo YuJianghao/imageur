@@ -43,7 +43,7 @@ const upload = () => {
                 </NIcon>
               </div>
               <NText style="font-size: 16px">
-                Click our drag inside to upload.
+                Click or drag inside to upload.
               </NText>
             </NUploadDragger>
           </NUpload>
