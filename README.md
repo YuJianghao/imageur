@@ -10,7 +10,8 @@ Image pool management site
 
 ## Install
 
-> Docker is the only way to install imageur. (Or you can run dev mode :p)
+Docker is the only way to install imageur. (Or you can run dev mode :p)
+
 > Only Aliyun OSS is supported now. If you want to add more, raise an issue :P.
 
 ### Setup Aliyun-OSS service
