@@ -46,7 +46,25 @@ Exposed Headers:
 
 ### Setup Aliyun STS service
 
-[See here](https://help.aliyun.com/document_detail/100624.htm)
+[Follow this document first](https://help.aliyun.com/document_detail/100624.htm)
+
+YOU NEED TO CHANGE **POLICY DOCUMENT** TO THE FOLLOWING
+
+```json
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "oss:PutObject",
+      "Resource": [
+        "acs:oss:*:*:YOUR_BUCKET_NAME/share",
+        "acs:oss:*:*:YOUR_BUCKET_NAME/share/*"
+      ]
+    }
+  ]
+}
+```
 
 You need to get the following field in this step:
 
