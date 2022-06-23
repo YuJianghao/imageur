@@ -20,7 +20,8 @@ Docker is the only way to install imageur. (Or you can run dev mode :p)
 
 - Login to [OSS console](https://oss.console.aliyun.com/)
 - Click **Bucket List**, click **Create Bucket**
-- Fill in the parameters and create Bucket
+- Fill in the parameters. `Public read` is required
+- Create Bucket
 
 [Setup CORS](https://help.aliyun.com/document_detail/31903.htm)
 
